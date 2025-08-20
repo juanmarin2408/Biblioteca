@@ -6,10 +6,10 @@ services:
     container_name: mysql_biblioteca
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: libros_bd
+      MYSQL_ROOT_PASSWORD: admin     # Contraseña de root
+      MYSQL_DATABASE: libros_bd      # Base de datos inicial
     ports:
-      - "3306:3306"
+      - "3307:3306"                  # Exponer MySQL a tu host
     volumes:
       - db_data:/var/lib/mysql
       - ./bd/init.sql:/docker-entrypoint-initdb.d/init.sql
