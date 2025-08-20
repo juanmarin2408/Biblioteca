@@ -262,10 +262,10 @@ class LibrosAppHermosa:
         self.anio_var = tk.StringVar()
         self.anio_entry = ttk.Entry(parent, textvariable=self.anio_var, width=30, font=('Segoe UI', 10))
         self.anio_entry.grid(row=3, column=1, pady=(10, 5), padx=(10, 0))
-        ttk.Label(parent, text="(1000 - año actual)", 
+        ttk.Label(parent, text="(1000 - anio actual)", 
                  font=('Segoe UI', 8), foreground='#6c757d').grid(row=3, column=2, sticky=tk.W, padx=(10, 0))
         
-        # Validación en tiempo real para año
+        # Validación en tiempo real para anio
         self.anio_var.trace('w', self.validar_anio_tiempo_real)
         
         # Género con selector
@@ -447,7 +447,7 @@ class LibrosAppHermosa:
                 libro.referencia,
                 libro.nombre,
                 libro.autor,
-                libro.año,
+                libro.anio,
                 libro.genero or "",
                 libro.estado,
                 libro.fecha_inicio or "",
@@ -477,7 +477,7 @@ class LibrosAppHermosa:
             if (termino in libro.referencia.lower() or 
                 termino in libro.nombre.lower() or 
                 termino in libro.autor.lower() or 
-                termino in str(libro.año) or
+                termino in str(libro.anio) or
                 (libro.genero and termino in libro.genero.lower())):
                 libros_encontrados.append(libro)
         
@@ -489,7 +489,7 @@ class LibrosAppHermosa:
                 libro.referencia,
                 libro.nombre,
                 libro.autor,
-                libro.año,
+                libro.anio,
                 libro.genero or "",
                 libro.estado,
                 libro.fecha_inicio or "",
@@ -513,7 +513,7 @@ class LibrosAppHermosa:
                 self.referencia_var.set(libro.referencia)
                 self.nombre_var.set(libro.nombre)
                 self.autor_var.set(libro.autor)
-                self.anio_var.set(libro.año)
+                self.anio_var.set(libro.anio)
                 self.genero_var.set(libro.genero or "")
                 self.estado_var.set(libro.estado)
                 
@@ -542,7 +542,7 @@ class LibrosAppHermosa:
                 
 📚 Título: {libro.nombre}
 ✍️ Autor: {libro.autor}
-📅 Año: {libro.año}
+📅 Año: {libro.anio}
 🏷️ Género: {libro.genero or 'No especificado'}
 📊 Estado: {libro.estado}
 📆 Fecha inicio: {libro.fecha_inicio or 'No especificada'}
@@ -585,7 +585,7 @@ class LibrosAppHermosa:
             self.referencia_entry.configure(style="Invalid.TEntry")
     
     def validar_anio_tiempo_real(self, *args):
-        """Validación en tiempo real para el año"""
+        """Validación en tiempo real para el anio"""
         anio_str = self.anio_var.get()
         
         if len(anio_str) == 0:
@@ -601,7 +601,7 @@ class LibrosAppHermosa:
         return bool(re.match(patron, referencia))
     
     def validar_anio(self, anio_str):
-        """Valida que el año sea un número válido en el rango permitido"""
+        """Valida que el anio sea un número válido en el rango permitido"""
         try:
             anio = int(anio_str)
             anio_actual = datetime.now().year
@@ -630,7 +630,7 @@ class LibrosAppHermosa:
                 libro.referencia,
                 libro.nombre,
                 libro.autor,
-                libro.año,
+                libro.anio,
                 libro.genero or "",
                 libro.estado,
                 libro.fecha_inicio or "",
@@ -717,12 +717,12 @@ class LibrosAppHermosa:
         if not self.autor_var.get().strip():
             errores.append("El autor es obligatorio")
         
-        # Validar año
+        # Validar anio
         anio_str = self.anio_var.get().strip()
         if not anio_str:
-            errores.append("El año es obligatorio")
+            errores.append("El anio es obligatorio")
         elif not self.validar_anio(anio_str):
-            errores.append("El año debe ser un número válido entre 1000 y el año actual")
+            errores.append("El anio debe ser un número válido entre 1000 y el anio actual")
         
         # Validar género
         if not self.genero_var.get():
@@ -787,7 +787,7 @@ class LibrosAppHermosa:
             fecha_final = None
         
         return Libros(
-            año=int(self.anio_var.get()),
+            anio=int(self.anio_var.get()),
             referencia=self.referencia_var.get().strip().upper(),
             autor=self.autor_var.get().strip(),
             nombre=self.nombre_var.get().strip(),
@@ -932,7 +932,7 @@ class LibrosAppHermosa:
                         libro.referencia,
                         libro.nombre,
                         libro.autor,
-                        libro.año,
+                        libro.anio,
                         libro.genero or "",
                         libro.estado,
                         libro.fecha_inicio or "",

@@ -1,7 +1,7 @@
 class Libros:
-    def __init__(self, año=None, referencia=None, autor=None, nombre=None,
+    def __init__(self, anio=None, referencia=None, autor=None, nombre=None,
                  genero=None, estado=None, fecha_inicio=None, fecha_fin=None):
-        self.año = año
+        self.anio = anio
         self.referencia = referencia
         self.autor = autor
         self.nombre = nombre
@@ -12,7 +12,7 @@ class Libros:
 
     def __str__(self):
         return (f"Libro(referencia='{self.referencia}', nombre='{self.nombre}', autor='{self.autor}', "
-                f"año={self.año}, genero='{self.genero}', estado='{self.estado}', "
+                f"anio={self.anio}, genero='{self.genero}', estado='{self.estado}', "
                 f"fecha_inicio={self.fecha_inicio}, fecha_fin={self.fecha_fin})")
 
     def __eq__(self, other):
