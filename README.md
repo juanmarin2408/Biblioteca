@@ -29,6 +29,28 @@ Aplicación de escritorio en **Python** para gestionar una biblioteca personal: 
   - `ttkthemes`
   - `tkcalendar`
 
+---
+
+## 🛠️ Instalación rápida
+
+```bash
+# 1) Clonar el repositorio
+git clone <URL_DE_TU_REPOSITORIO>
+cd <carpeta_del_proyecto>
+
+# 2) (Opcional) Crear y activar un entorno virtual
+python -m venv .venv
+# Windows
+.venv\Scripts\activate
+# macOS / Linux
+source .venv/bin/activate
+
+# 3) Instalar dependencias
+pip install -r requirements.txt
+# ...o directamente:
+pip install ttkthemes tkcalendar
+
+
 > Módulos estándar usados: `sqlite3`, `abc`, `typing`, `datetime`, `re`, `os` (no requieren instalación).
 
 ### (Opcional) `requirements.txt` sugerido
