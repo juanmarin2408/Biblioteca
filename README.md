@@ -35,7 +35,7 @@ Aplicación de escritorio en **Python** para gestionar una biblioteca personal: 
 
 ```bash
 # 1) Clonar el repositorio
-git clone <URL_DE_TU_REPOSITORIO>
+git clone https://github.com/juanmarin2408/Biblioteca.git
 cd <carpeta_del_proyecto>
 
 # 2) (Opcional) Crear y activar un entorno virtual
