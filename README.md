@@ -68,6 +68,8 @@ pip install ttkthemes tkcalendar
 
 ## ▶️ Ejecución
 ``` bash
+cd libros
+
 python app_libros.py
 ```
 
