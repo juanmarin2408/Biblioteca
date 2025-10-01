@@ -17,7 +17,6 @@ Aplicación de escritorio en **Python** para gestionar una biblioteca personal: 
   - **Campos obligatorios**: referencia, nombre, autor, año, género y estado.
   - **Coherencia de fechas**: *fecha de inicio ≤ fecha final*.
 - **Estadísticas** básicas en tiempo real (total, leídos, pendientes, % de progreso) y **estadísticas detalladas**.
-- **UI moderna** con `ttkthemes` (tema `arc`) y selectores de fecha con `tkcalendar`.
 - **SQLite** local sin servidor externo (`libros.db` se crea automáticamente).
 
 ---
