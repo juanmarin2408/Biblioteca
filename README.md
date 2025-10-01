@@ -53,5 +53,3 @@ pip install ttkthemes tkcalendar
 
 > Módulos estándar usados: `sqlite3`, `abc`, `typing`, `datetime`, `re`, `os` (no requieren instalación).
 
-### (Opcional) `requirements.txt` sugerido
-
