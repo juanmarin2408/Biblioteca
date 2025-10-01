@@ -48,7 +48,7 @@ libros
 ```bash
 # 1) Clonar el repositorio
 git clone https://github.com/juanmarin2408/Biblioteca.git
-cd libros
+cd Biblioteca
 
 # 2) (Opcional) Crear y activar un entorno virtual
 python -m venv .venv
