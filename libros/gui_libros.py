@@ -23,7 +23,6 @@ class LibrosApp:
         # Inicializar DAO
         self.libros_dao = LibrosDao()
         ...
-        # TODO: copiar aquí todos los métodos de la clase (crear_interfaz, validar, etc.)
         # Lista de géneros literarios
         self.generos_literarios = [
             "Ficción", "No ficción", "Novela", "Cuento", "Poesía",
@@ -945,3 +944,4 @@ class LibrosApp:
                   style="Success.TButton").pack(side=tk.LEFT, padx=(0, 10))
         ttk.Button(button_frame, text="❌ Cancelar", command=ventana_genero.destroy,
                   style="Secondary.TButton").pack(side=tk.LEFT)
+
