@@ -51,7 +51,7 @@ git clone https://github.com/juanmarin2408/Biblioteca.git
 cd Biblioteca
 
 # 2) (Opcional) Crear y activar un entorno virtual
-python -m venv .venv
+python3 -m venv .venv
 # Windows
 .venv\Scripts\activate
 # macOS / Linux
