@@ -35,7 +35,7 @@ Aplicación de escritorio en **Python** para gestionar una biblioteca personal: 
 libros
 ├──── app_libros.py           # Punto de entrada (inicia GUI, tema, y valida BD)
 ├──── conexion_gui.py         # Conexión SQLite y creación de tabla (init_db)
-├──── Ilibros.py              # Interfaz (ABC) para el acceso a datos de libros (DAO)
+├──── Ilibros.py              # abstract  (ABC) para el acceso a datos de libros (DAO)
 ├──── Libros.py               # Modelo de dominio (clase Libros)
 ├──── Libros_dao_gui.py       # Implementación DAO con SQLite (CRUD, búsquedas, conteos)
 ├──── gui_libros.py           # Interfaz gráfica (Tkinter): formularios, tabla, filtros y estadísticas
